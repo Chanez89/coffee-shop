@@ -1,6 +1,6 @@
 function NewDrinkForm() {
   return (
-    <h1>hi from NewDrinkForm</h1>
+    <h1>NewDrinkForm component</h1>
   );
 }
 

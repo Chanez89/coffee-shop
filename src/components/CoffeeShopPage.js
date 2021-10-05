@@ -4,7 +4,7 @@ import SearchBar from './SearchBar.js'; // may need to change where to import th
 function CoffeeShopPage() {
   return (
     <div>
-      <h1>hi from CoffeeShopPage</h1>
+      <h1>CoffeeShopPage component</h1>
       <SearchBar />
       <DrinkMenu />
     </div>

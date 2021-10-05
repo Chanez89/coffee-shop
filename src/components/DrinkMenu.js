@@ -4,7 +4,7 @@ import DrinkCard from './DrinkCard.js';
 function DrinkMenu() {
   return (
     <div>
-      <h1>hi from DrinkMenu</h1>
+      <h1>DrinkMenu component</h1>
       <DrinkCard />
     </div>
   );

@@ -12,7 +12,7 @@ function handleChange(event){
     [event.target.name]: event.target.value,
   })
 }
-console.log(formData)
+// console.log(formData)
   return (
     <input type="search"
     name="search-form"
