@@ -1,25 +1,16 @@
-import React, {useState} from "react"
+import React from "react"
 
 
 
-function SearchBar() {
-
-const [formData, setFormData] = useState("")
-
-function handleChange(event){
-  setFormData({
-    ...formData,
-    [event.target.name]: event.target.value,
-  })
-}
-// console.log(formData)
+function SearchBar({ searchFormData, handleChange}) {
   return (
-    <input type="search"
+    <input type="text"
     name="search-form"
     id="search-form"
     className="search-input"
     placeholder="Search drinks..."
     onChange={handleChange}
+    value={searchFormData}
     />
 
     
