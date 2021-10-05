@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Black",
+      "description": "Black coffee is as simple as it gets with ground coffee beans steeped in hot water, served warm. And if you want to sound fancy, you can call black coffee by its proper name: cafe noir.",
+      "ingredients": [
+        "Coffee"
+      ],
+      "image": "https://images.unsplash.com/photo-1519333796630-4b7d19ad1bb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+      "price": 2.00,
+      "likes": 0,
+      "hot": true,
+      "id": 1
+    },
+    {
+      "title": "",
+      "description": "",
+      "ingredients": [
+        ""
+      ],
+      "image": "https://images.unsplash.com/photo-1519333796630-4b7d19ad1bb3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80",
+      "price": 2.00,
+      "likes": 0,
+      "hot": true,
+      "id": 2
+    }
+  ]
