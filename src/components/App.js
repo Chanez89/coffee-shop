@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import NavBar from './NavBar.js';
 import Home from './Home.js';
@@ -7,6 +7,18 @@ import NewDrinkForm from './NewDrinkForm.js';
 import About from './About.js';
 
 function App() {
+  const BASE_URL = 'http://localhost:4000/drinks';
+
+  // defining state to keep track of all drinks in menu
+  const [drinksMenuArr, setDrinksMenuArr] = useState([]);
+
+  // GET /drinks
+  useEffect(() => {
+    fetch(BASE_URL)
+    .then(response => response.json())
+    .then(data => setDrinksMenuArr(data));
+  }, []);
+
   return (
     <div>
       <NavBar />
@@ -15,7 +27,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path='/CoffeeShop'>
-          <CoffeeShopPage />
+          <CoffeeShopPage drinksMenuArr={drinksMenuArr} />
         </Route>
         <Route exact path='/NewDrinkForm'>
           <NewDrinkForm />
