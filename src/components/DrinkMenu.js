@@ -9,6 +9,7 @@ function DrinkMenu({drinksToDisplay}) {
       return (
         <DrinkCard
           key={idx}
+          drinkID={singleDrink.id}
           drinkTitle={singleDrink.title}
           drinkDescription={singleDrink.description}
           drinkIngredients={singleDrink.ingredients}
