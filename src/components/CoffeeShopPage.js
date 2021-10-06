@@ -1,7 +1,7 @@
 import DrinkMenu from './DrinkMenu.js';
 import SearchBar from './SearchBar.js'; // may need to change where to import this component
 
-function CoffeeShopPage({drinksMenuArr}) {
+function CoffeeShopPage({drinksMenuArr, setDrinksMenuArr}) {
 
   // filter drinks by search text, currently callback returning true for placeholder
   const drinksToDisplay = drinksMenuArr.filter(singleDrink => true);
