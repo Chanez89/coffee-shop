@@ -23,7 +23,16 @@ function DrinkMenu({drinksToDisplay}) {
   );
 
   return (
-    <ul>
+    <ul className="cards"
+    style={{
+        listStyle: "none",
+        display: "flex",
+        justifyContent: "space-evenly",
+        flexWrap: "wrap",
+        gap: "25px 300px" 
+        // gap first# is spacing from top and bottom boxes, 2nd # is left and right
+        // pushing it high lets us show 4 cards instead of more
+    }}>
       {drinksToDisplayJSX}
     </ul>
   );

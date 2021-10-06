@@ -4,7 +4,7 @@ import DrinkMenu from './DrinkMenu.js';
 import SearchBar from './SearchBar.js'; // may need to change where to import this component
 import reactDom from 'react-dom';
 
-function CoffeeShopPage({drinksMenuArr}) {
+function CoffeeShopPage({drinksMenuArr, setDrinksMenuArr}) {
 
 // filter drinks by search text, currently callback returning true for placeholder
 
