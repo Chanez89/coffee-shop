@@ -1,7 +1,10 @@
+import {useState} from 'react';
 // component responsible for rendering each drink card
 function DrinkCard(props) {
+  // const BASE_URL = 'http://localhost:4000/drinks'
   // destructuring `props`
   const {
+    drinkId,
     drinkTitle,
     drinkDescription,
     drinkIngredients,
@@ -11,25 +14,48 @@ function DrinkCard(props) {
     drinkHot,
     drinkLiked
   } = props;
+  
+ const [isLiked, setLiked] = useState(false);
+
+
 
  function loveItHandler () {
-   return (
-     console.log('Love it clicked!')
-   )
+   setLiked(!isLiked)
+
+  //  fetch(`${BASE_URL}/${drinkId}`, {
+  //    method: "PATCH",
+  //    headers: {
+  //      "Content-Type": "application/json"
+  //    },
+  //    body: JSON.stringify({liked: isLiked})
+  //  })
+
+  //  console.log("checking Status of isLiked", isLiked)
+  //  .then(response => response.json())
+  //  .then(data => {debugger;})
+
  }
 
- function descriptionHandler() {
-   return (
-     console.log({drinkDescription})
-   )
-  }
+//  function descriptionHandler() {
+//   console.log("description was clicked!") 
+//   return (
+//      console.log({drinkDescription})
+     
+//    )
+//   }
  
 function drinkHandler() {
-  return(
-    console.log('drinkHot')
-    // drinkHot ? "☕":"❄️";
-  )
+
+  let drinkTemp = drinkHot ? "☕":"❄️";
+  return drinkTemp
+  
 }
+
+let ingredientsArrayJSX = drinkIngredients.map((ingredient, idx) => {
+  return (
+    <li key={idx} style={{listStyle: "none"}}>{ingredient}</li>
+  )
+ })
  
  return (
    
@@ -45,15 +71,19 @@ function drinkHandler() {
         // need to figure out how to center picture in card
        />
       <h3 id="drinkTitle">{drinkTitle}</h3>
-      <p style= {{fontStyle: "italic"}}>{drinkIngredients}</p>
+
+
+
+      <ul style= {{fontStyle: "italic"}}>{ingredientsArrayJSX}</ul>
       {/*  need to add an empty space between DrinkIngredients */}
       {/* <p>Description: {drinkDescription}</p> */}
       <p>Price: ${drinkPrice}</p>
-      {/* <p>Number of item in cart: {drinkCount}</p>      do we need this? */}
-      <p>Hot? {drinkHandler}</p>
+      {/* <p>Number of item in cart: {drinkCount}</p> do we need this? */}
+      <p>Hot? {drinkHandler()}</p>
       {/* directs us to the ternary function drinkHandler */}
       <button onClick={descriptionHandler}>Description</button>
-      <button onClick={loveItHandler}>Love it! {drinkLiked}</button>
+        {/* ternary function that holds an empty heart or a full heart when liked/unliked */}
+      {isLiked ? (<button onClick={loveItHandler}>❤</button>) : (<button onClick={loveItHandler}>♡</button>)}
     </li>
   );
 }
