@@ -19,6 +19,12 @@ function App() {
     .then(data => setDrinksMenuArr(data));
   }, []);
 
+  // function to be passed down to `NewDrinkForm` component
+  // to add a new drink to `drinksMenuArr`
+  function addNewDrinkToDrinksMenuArr(newDrink) {
+    setDrinksMenuArr([...drinksMenuArr, newDrink]);
+  }
+
   return (
     <div>
       <NavBar />
@@ -30,7 +36,7 @@ function App() {
           <CoffeeShopPage drinksMenuArr={drinksMenuArr} />
         </Route>
         <Route exact path='/NewDrinkForm'>
-          <NewDrinkForm />
+          <NewDrinkForm addNewDrinkToDrinksMenuArr={addNewDrinkToDrinksMenuArr} />
         </Route>
         <Route exact path='/About'>
           <About />
