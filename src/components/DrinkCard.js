@@ -1,7 +1,7 @@
-import {useState} from 'react';
 // component responsible for rendering each drink card
 function DrinkCard(props) {
   const BASE_URL = 'http://localhost:4000/drinks'
+  
   // destructuring `props`
   const {
     drinkID,
@@ -14,28 +14,21 @@ function DrinkCard(props) {
     drinkHot,
     drinkLiked
   } = props;
-  
-  const [isLiked, setLiked] = useState(false);
 
-
-
+  // function that is triggered when the heart button is clicked to like a drink
   function loveItHandler () {
-    setLiked(!isLiked)
+    // PATCH /drinks/:id
+    fetch(`${BASE_URL}/${drinkID}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({liked: !drinkLiked})
+    })
+    .then(response => response.json())
+    .then(data => props.updateLikedStatusOfDrink(data));
   }
-
-  //  fetch(`${BASE_URL}/${drinkID}`, {
-  //    method: "PATCH",
-  //    headers: {
-  //      "Content-Type": "application/json"
-  //    },
-  //    body: JSON.stringify({liked: isLiked})
-  //  })
-
-  //  console.log("checking Status of isLiked", isLiked)
-  //  .then(response => response.json())
-  //  .then(data => {debugger;})
-
-
+  
   function descriptionHandler() {
     console.log("description was clicked!")
     return (
@@ -76,7 +69,7 @@ function DrinkCard(props) {
       {/* directs us to the ternary function drinkHandler */}
       <button onClick={descriptionHandler}>Description</button>
       {/* ternary function that holds an empty heart or a full heart when liked/unliked */}
-      {isLiked ? (<button onClick={loveItHandler}>❤</button>) : (<button onClick={loveItHandler}>♡</button>)}
+      <button onClick={loveItHandler}>{drinkLiked ? '❤' : '♡'}</button>
     </li>
   );
 }

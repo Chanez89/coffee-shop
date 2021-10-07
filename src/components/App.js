@@ -25,6 +25,22 @@ function App() {
     setDrinksMenuArr([...drinksMenuArr, newDrink]);
   }
 
+  // function to be passed down to `CoffeeShopPage` then to `DrinkMenu` then to `DrinkCard`
+  // to update the liked status of a drink in `drinksMenuArr`
+  function updateLikedStatusOfDrink(updatedDrink) {
+    setDrinksMenuArr(
+      drinksMenuArr.map(
+        singleDrink => {
+          if (singleDrink.id === updatedDrink.id) {
+            return updatedDrink;
+          } else {
+            return singleDrink;
+          }
+        }
+      )
+    );
+  }
+
   return (
     <div>
       <NavBar />
@@ -33,7 +49,10 @@ function App() {
           <Home />
         </Route>
         <Route exact path='/CoffeeShop'>
-          <CoffeeShopPage drinksMenuArr={drinksMenuArr} />
+          <CoffeeShopPage
+            drinksMenuArr={drinksMenuArr}
+            updateLikedStatusOfDrink={updateLikedStatusOfDrink}
+          />
         </Route>
         <Route exact path='/NewDrinkForm'>
           <NewDrinkForm addNewDrinkToDrinksMenuArr={addNewDrinkToDrinksMenuArr} />

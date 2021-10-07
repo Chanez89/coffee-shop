@@ -1,7 +1,7 @@
 import DrinkCard from './DrinkCard.js';
 
 // container component for all drink cards
-function DrinkMenu({drinksToDisplay}) {
+function DrinkMenu({ drinksToDisplay, updateLikedStatusOfDrink }) {
 
   // map through `drinksToDisplay` to return a new arry of JSX
   const drinksToDisplayJSX = drinksToDisplay.map(
@@ -18,6 +18,7 @@ function DrinkMenu({drinksToDisplay}) {
           drinkCount={singleDrink.count}
           drinkHot={singleDrink.hot}
           drinkLiked={singleDrink.liked}
+          updateLikedStatusOfDrink={updateLikedStatusOfDrink}
         />
       );
     }
