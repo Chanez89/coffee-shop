@@ -80,75 +80,69 @@ function NewDrinkForm({addNewDrinkToDrinksMenuArr}) {
     <div>
       <h1>New Drink Suggestion</h1>
       <form onSubmit={submitNewDrinkFormHandler}>
-        <label>Name:
-          <input
-            type='text'
-            name='title'
-            value={newDrinkFormData.title}
-            onChange={newDrinkFormInputFieldHandler}
-            style={{display: 'block'}}
-          />
-        </label>
-        <label>Description:
-          <textarea
-            name='description'
-            value={newDrinkFormData.description}
-            onChange={newDrinkFormInputFieldHandler}
-            style={{display: 'block'}}
-          >
-          </textarea>
-        </label>
-        <label>Ingredient 1:
-          <input
-            type='text'
-            name='ingredient1'
-            value={newDrinkFormData.ingredient1}
-            onChange={newDrinkFormInputFieldHandler}
-            style={{display: 'block'}}
-          />
-        </label>
-        <label>Ingredient 2:
-          <input
-            type='text'
-            name='ingredient2'
-            value={newDrinkFormData.ingredient2}
-            onChange={newDrinkFormInputFieldHandler}
-            style={{display: 'block'}}
-          />
-        </label>
-        <label>Ingredient 3:
-          <input
-            type='text'
-            name='ingredient3'
-            value={newDrinkFormData.ingredient3}
-            onChange={newDrinkFormInputFieldHandler}
-            style={{display: 'block'}}
-          />
-        </label>
-        <label>Image URL:
-          <input
-            type='text'
-            name='image'
-            value={newDrinkFormData.image}
-            onChange={newDrinkFormInputFieldHandler}
-            style={{display: 'block'}}
-          />
-        </label>
-        <label>Hot or cold:
-          <input
-            type='radio'
-            name='hot'
-            value={true}
-            defaultChecked
-            onClick={newDrinkFormInputFieldHandler}
-            />Hot
-          <input
-            type='radio'
-            name='hot'
-            value={false}
-            onClick={newDrinkFormInputFieldHandler}
-          />Cold
-        </label>
+        <label>Name:</label>
+        <input
+          type='text'
+          name='title'
+          value={newDrinkFormData.title}
+          onChange={newDrinkFormInputFieldHandler}
+          style={{display: 'block'}}
+        />
+        <label>Description:</label>
+        <textarea
+          name='description'
+          value={newDrinkFormData.description}
+          onChange={newDrinkFormInputFieldHandler}
+          style={{display: 'block'}}
+        >
+        </textarea>
+        <label>Ingredient 1:</label>
+        <input
+          type='text'
+          name='ingredient1'
+          value={newDrinkFormData.ingredient1}
+          onChange={newDrinkFormInputFieldHandler}
+          style={{display: 'block'}}
+        />
+        <label>Ingredient 2:</label>
+        <input
+          type='text'
+          name='ingredient2'
+          value={newDrinkFormData.ingredient2}
+          onChange={newDrinkFormInputFieldHandler}
+          style={{display: 'block'}}
+        />
+        <label>Ingredient 3:</label>
+        <input
+          type='text'
+          name='ingredient3'
+          value={newDrinkFormData.ingredient3}
+          onChange={newDrinkFormInputFieldHandler}
+          style={{display: 'block'}}
+        />
+        <label>Image URL:</label>
+        <input
+          type='text'
+          name='image'
+          value={newDrinkFormData.image}
+          onChange={newDrinkFormInputFieldHandler}
+          style={{display: 'block'}}
+        />
+        <input
+          type='radio'
+          name='hot'
+          value={true}
+          defaultChecked
+          onClick={newDrinkFormInputFieldHandler}
+        />
+        <label>Hot</label>
+        <input
+          type='radio'
+          name='hot'
+          value={false}
+          onClick={newDrinkFormInputFieldHandler}
+        />
+        <label>Cold</label>
         <button style={{display: 'block'}}>Submit New Drink!</button>
       </form>
     </div>
