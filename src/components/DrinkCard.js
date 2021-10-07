@@ -51,16 +51,18 @@ function DrinkCard(props) {
     <li classsName="card"
       style={{
       margin: "1rem",
-      backgroundColor: "#EFC3A4"   
+      backgroundColor: "#EFC3A4",
+      textAlign: "center"     //added textAlign
       }}
     >
-      <img src={drinkImage} alt={drinkTitle}
-        width="200px" height="200px"
-        // style={{alignSelf: "center"}}
-        // need to figure out how to center picture in card
+      <img className="padding-lg" style={{borderRadius: "50%"}} src={drinkImage} alt={drinkTitle}
+        width="200px" height="200px" //added className and Style
       />
       <h3 id="drinkTitle">{drinkTitle}</h3>
-      <ul style= {{fontStyle: "italic"}}>{ingredientsArrayJSX}</ul>
+      <ul style= {{
+        fontStyle: "italic",
+        paddingRight: "15%" //added paddingRight
+        }}>{ingredientsArrayJSX}</ul>
       {/*  need to add an empty space between DrinkIngredients */}
       {/* <p>Description: {drinkDescription}</p> */}
       <p>Price: ${drinkPrice}</p>

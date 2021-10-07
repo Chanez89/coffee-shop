@@ -1,0 +1,21 @@
+.bg-light {
+    background-color: #c9cba3 !important;
+}
+
+.no-underline {
+    text-decoration: none !important
+}
+
+.nav-bar-styling {
+    margin: 0 auto;
+    width: 80% !important;
+    font-family: 'Dosis', sans-serif;
+    font-size: large;
+    padding-right: 12% !important;
+}
+
+.background-image {
+    /* background-image: url("https://pixabay.com/get/g7f69817abe5e678e51ffa447206f6bdd887b7661dbfc61e181908f24835c32a216c4865fdc3f434b6ef1628c98d991923a0f0c3f91eff960a98aa8acb6bbe25f211aefd1df0a5267194cf424bb09dbf6_1920.jpg"); */
+    background-color: #faf9f9 ;
+    background-size: cover;
+}
