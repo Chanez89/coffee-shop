@@ -80,7 +80,7 @@ function DrinkCard(props) {
         width="300px" height="300px" //added className and Style
       />
       <ul 
-        className="card-font text-center p-3">{ingredientsArrayJSX}</ul>
+        className="card-font text-center p-3 card-ul">{ingredientsArrayJSX}</ul>
       {/*  need to add an empty space between DrinkIngredients */}
       {/* <p>Description: {drinkDescription}</p> */}
       <p className="card-font">${drinkPrice.toFixed(2)}</p>
