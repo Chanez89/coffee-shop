@@ -20,6 +20,7 @@ function DrinkMenu({ drinksToDisplay, updateLikedStatusOfDrink, updateDrinkItemC
           drinkLiked={singleDrink.liked}
           updateLikedStatusOfDrink={updateLikedStatusOfDrink}
           updateDrinkItemCountInCart={updateDrinkItemCountInCart}
+          drinkDescriptionURL={singleDrink.descriptionURL}
         />
       );
     }

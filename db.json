@@ -8,10 +8,11 @@
         "Coffee"
       ],
       "image": "./images/JaYuNe Cafe Noir.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Coffee#Serving"
     },
     {
       "id": 2,
@@ -22,10 +23,11 @@
         "Steamed Milk"
       ],
       "image": "./images/Latte.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Latte"
     },
     {
       "id": 3,
@@ -37,10 +39,11 @@
         "Foam"
       ],
       "image": "./images/Cappuccino.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Cappuccino"
     },
     {
       "id": 4,
@@ -51,10 +54,11 @@
         "Hot Water"
       ],
       "image": "./images/Americano.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Caff%C3%A8_Americano"
     },
     {
       "id": 5,
@@ -64,10 +68,11 @@
         "1oz Espresso"
       ],
       "image": "./images/Espresso.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Espresso"
     },
     {
       "id": 6,
@@ -77,10 +82,11 @@
         "2oz Espresso"
       ],
       "image": "./images/Doppio.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Doppio"
     },
     {
       "id": 7,
@@ -91,10 +97,11 @@
         "1oz Steamed Milk"
       ],
       "image": "./images/Cortado.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Cortado"
     },
     {
       "id": 8,
@@ -105,10 +112,11 @@
         "Espresso"
       ],
       "image": "./images/Red Eye.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://coffee.fandom.com/wiki/Red_eye"
     },
     {
       "id": 9,
@@ -119,10 +127,11 @@
         "Foamed milk"
       ],
       "image": "./images/Galão.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Gal%C3%A3o"
     },
     {
       "id": 10,
@@ -132,10 +141,11 @@
         "Long pulled espresso"
       ],
       "image": "./images/Lungo.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Lungo"
     },
     {
       "id": 11,
@@ -146,10 +156,11 @@
         "Foam"
       ],
       "image": "./images/Macchiato.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Caff%C3%A8_macchiato"
     },
     {
       "id": 12,
@@ -161,10 +172,11 @@
         "Chocolate"
       ],
       "image": "./images/Mocha.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Caff%C3%A8_mocha"
     },
     {
       "id": 13,
@@ -174,10 +186,11 @@
         "Short pulled espresso"
       ],
       "image": "./images/Ristretto.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
+      
     },
     {
       "id": 14,
@@ -188,7 +201,7 @@
         "Steamed Milk"
       ],
       "image": "./images/Flat White.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
@@ -202,7 +215,7 @@
         "Ice cream"
       ],
       "image": "./images/Affogato.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
@@ -216,7 +229,7 @@
         "Steamed Milk"
       ],
       "image": "./images/Café au Lait.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
@@ -232,7 +245,7 @@
         "Cream"
       ],
       "image": "./images/Irish.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
@@ -247,7 +260,7 @@
         "Hot Water"
       ],
       "image": "./images/Guayoyo.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
@@ -263,7 +276,7 @@
         "Milk"
       ],
       "image": "./images/Cortadito.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
@@ -279,7 +292,7 @@
         "Traditional"
       ],
       "image": "./images/Aguapanela Coffee.jpeg",
-      "price": 5.00,
+      "price": 5,
       "count": 0,
       "hot": true,
       "liked": false
