@@ -7,8 +7,8 @@ function About() {
       <div className="">
       <h1 className="lead">Neil Chanez</h1>
         <div className="justify-content-between">
-          <img  src="https://picsum.photos/200/300"/>
-          <p className="mt-4 p-3">Located in Seattle, Washington. You can find me at <ul className="list-inline"><li><a href="https://github.com/nasjac26">github</a> </li><li><a href="https://www.linkedin.com/in/jacob-nasrallah-6792b5106/">linkedin</a></li></ul></p>
+          <img  width="350px" height="350px" src="./images/Neil.jpg"/>
+          <p className="mt-4 p-3">Located in Seattle, Washington. You can find me at <ul className="list-inline"><li><a href="https://github.com/Chanez89">github</a> </li><li><a href="https://www.linkedin.com/in/neil-chanez-gracia-04743b18/">linkedin</a></li></ul></p>
         </div>
         <h1 className="lead">Yuxiang Li</h1>
 
