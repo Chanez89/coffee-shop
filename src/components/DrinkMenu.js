@@ -1,7 +1,7 @@
 import DrinkCard from './DrinkCard.js';
 
 // container component for all drink cards
-function DrinkMenu({ drinksToDisplay, updateLikedStatusOfDrink }) {
+function DrinkMenu({ drinksToDisplay, updateLikedStatusOfDrink, updateDrinkItemCountInCart }) {
 
   // map through `drinksToDisplay` to return a new arry of JSX
   const drinksToDisplayJSX = drinksToDisplay.map(
@@ -19,22 +19,14 @@ function DrinkMenu({ drinksToDisplay, updateLikedStatusOfDrink }) {
           drinkHot={singleDrink.hot}
           drinkLiked={singleDrink.liked}
           updateLikedStatusOfDrink={updateLikedStatusOfDrink}
+          updateDrinkItemCountInCart={updateDrinkItemCountInCart}
         />
       );
     }
   );
 
   return (
-    <ul className="cards"
-    style={{
-        listStyle: "none",
-        display: "flex",
-        justifyContent: "space-evenly",
-        flexWrap: "wrap",
-        gap: "25px 300px" 
-        // gap first# is spacing from top and bottom boxes, 2nd # is left and right
-        // pushing it high lets us show 4 cards instead of more
-    }}>
+    <ul className="cards row">
       {drinksToDisplayJSX}
     </ul>
   );

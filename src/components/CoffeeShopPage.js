@@ -3,7 +3,7 @@ import { useState } from 'react';
 import DrinkMenu from './DrinkMenu.js';
 import SearchBar from './SearchBar.js'; // may need to change where to import this component
 
-function CoffeeShopPage({ drinksMenuArr, updateLikedStatusOfDrink }) {
+function CoffeeShopPage({ drinksMenuArr, updateLikedStatusOfDrink, updateDrinkItemCountInCart }) {
   //creatubg state to hold search form data
   const [searchFormData, setSearchFormData] = useState("")
 
@@ -23,11 +23,12 @@ function CoffeeShopPage({ drinksMenuArr, updateLikedStatusOfDrink }) {
   
   return (
     <div>
-      <h1>CoffeeShopPage component</h1>
+      <h1 className="text-center card-font">Drink Menu</h1>
       <SearchBar handleChange={handleChange} searchFormData={searchFormData}  />
       <DrinkMenu
         drinksToDisplay={drinksToDisplay}
         updateLikedStatusOfDrink={updateLikedStatusOfDrink}
+        updateDrinkItemCountInCart={updateDrinkItemCountInCart}
       />
     </div>
   );

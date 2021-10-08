@@ -28,6 +28,30 @@ function DrinkCard(props) {
     .then(response => response.json())
     .then(data => props.updateLikedStatusOfDrink(data));
   }
+
+  // function that is triggered when subtract-from or add-to cart button is clicked
+  function subtractAddOneDrinkItemInCartHandler(event) {
+    // creating a variable with `let` because `drinkCount` is defined with `const`
+    let itemCountInCart = drinkCount;
+
+    // checking subtract or add button is clicked
+    if ((event.target.name === 'subtract-one-item-from-cart-btn') && (itemCountInCart > 0)) {
+      itemCountInCart--;
+    } else if (event.target.name === 'add-one-item-to-cart-btn') {
+      itemCountInCart++;
+    }
+
+    // PATCH /drinks/:id
+    fetch(`${BASE_URL}/${drinkID}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({count: itemCountInCart})
+    })
+    .then(response => response.json())
+    .then(data => props.updateDrinkItemCountInCart(data));
+  }
   
   function descriptionHandler() {
     console.log("description was clicked!")
@@ -37,7 +61,7 @@ function DrinkCard(props) {
   }
 
   function drinkHandler() {
-    let drinkTemp = drinkHot ? "☕":"❄️";
+    let drinkTemp = drinkHot ? "Hot ☕":"Iced ❄️";
     return drinkTemp
   }
   
@@ -48,30 +72,44 @@ function DrinkCard(props) {
   })
   
   return (
-    <li classsName="card"
-      style={{
-      margin: "1rem",
-      backgroundColor: "#EFC3A4",
-      textAlign: "center"     //added textAlign
-      }}
+    <li className="card container text-center p-2 mt-4 gap" 
+        style={{backgroundColor: "#EFC3A4",}}
     >
-      <img className="padding-lg" style={{borderRadius: "50%"}} src={drinkImage} alt={drinkTitle}
-        width="200px" height="200px" //added className and Style
+      <h1 id="drinkTitle" className="card-font">{drinkTitle}</h1>
+      <img className="" src={drinkImage} alt={drinkTitle}
+        width="300px" height="300px" //added className and Style
       />
-      <h3 id="drinkTitle">{drinkTitle}</h3>
-      <ul style= {{
-        fontStyle: "italic",
-        paddingRight: "15%" //added paddingRight
-        }}>{ingredientsArrayJSX}</ul>
+      <ul 
+        className="card-font text-center p-3">{ingredientsArrayJSX}</ul>
       {/*  need to add an empty space between DrinkIngredients */}
       {/* <p>Description: {drinkDescription}</p> */}
-      <p>Price: ${drinkPrice}</p>
+      <p className="card-font">${drinkPrice.toFixed(2)}</p>
       {/* <p>Number of item in cart: {drinkCount}</p> do we need this? */}
-      <p>Hot? {drinkHandler()}</p>
+      <p className="card-font">{drinkHandler()}</p>
       {/* directs us to the ternary function drinkHandler */}
-      <button onClick={descriptionHandler}>Description</button>
+      <button className="btn details px-auto card-title-font" onClick={descriptionHandler}>Description</button>
       {/* ternary function that holds an empty heart or a full heart when liked/unliked */}
-      <button onClick={loveItHandler}>{drinkLiked ? '❤' : '♡'}</button>
+      <button className="btn details like-btn" onClick={loveItHandler}>{drinkLiked ? '❤' : '♡'}</button>
+      {/* <div>Add Cart + -</div> */}
+      <div>
+        <button
+          name='subtract-one-item-from-cart-btn'
+          onClick={subtractAddOneDrinkItemInCartHandler}
+          className="btn"
+        >
+          ➖
+        </button>
+        <span>
+          {drinkCount}
+        </span>
+        <button
+          name='add-one-item-to-cart-btn'
+          onClick={subtractAddOneDrinkItemInCartHandler}
+          className="btn"
+        >
+          ➕
+        </button>
+      </div>
     </li>
   );
 }

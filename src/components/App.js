@@ -41,9 +41,25 @@ function App() {
     );
   }
 
+  // function to be passed down to `CoffeeShopPage` then to `DrinkMenu` then to `DrinkCard`
+  // to increase or decrease the count of the clicked drink in cart 
+  function updateDrinkItemCountInCart(updatedDrink) {
+    setDrinksMenuArr(
+      drinksMenuArr.map(
+        singleDrink => {
+          if (singleDrink.id === updatedDrink.id) {
+            return updatedDrink;
+          } else {
+            return singleDrink;
+          }
+        }
+      )
+    );
+  }
+
   return (
-    <div>
-      <NavBar />
+    <div className="background-image">
+      <NavBar drinksMenuArr={drinksMenuArr} />
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -52,6 +68,7 @@ function App() {
           <CoffeeShopPage
             drinksMenuArr={drinksMenuArr}
             updateLikedStatusOfDrink={updateLikedStatusOfDrink}
+            updateDrinkItemCountInCart={updateDrinkItemCountInCart}
           />
         </Route>
         <Route exact path='/NewDrinkForm'>
