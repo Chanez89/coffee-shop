@@ -12,7 +12,8 @@ function DrinkCard(props) {
     drinkPrice,
     drinkCount,
     drinkHot,
-    drinkLiked
+    drinkLiked,
+    drinkDescriptionURL
   } = props;
 
   // function that is triggered when the heart button is clicked to like a drink
@@ -53,12 +54,6 @@ function DrinkCard(props) {
     .then(data => props.updateDrinkItemCountInCart(data));
   }
   
-  function descriptionHandler() {
-    console.log("description was clicked!")
-    return (
-      console.log({drinkDescription})
-    )
-  }
 
   function drinkHandler() {
     let drinkTemp = drinkHot ? "Hot ☕":"Iced ❄️";
@@ -77,17 +72,18 @@ function DrinkCard(props) {
     >
       <h1 id="drinkTitle" className="card-font">{drinkTitle}</h1>
       <img className="" src={drinkImage} alt={drinkTitle}
-        width="300px" height="300px" //added className and Style
+        width="300px" height="300px"
       />
-      <ul 
-        className="card-font text-center p-3 card-ul">{ingredientsArrayJSX}</ul>
+      <ul className="card-font text-center p-3 card-ul">{ingredientsArrayJSX}</ul>
       {/*  need to add an empty space between DrinkIngredients */}
       {/* <p>Description: {drinkDescription}</p> */}
+
       <p className="card-font">${drinkPrice.toFixed(2)}</p>
-      {/* <p>Number of item in cart: {drinkCount}</p> do we need this? */}
       <p className="card-font">{drinkHandler()}</p>
       {/* directs us to the ternary function drinkHandler */}
-      <button className="btn details px-auto card-title-font" onClick={descriptionHandler}>Description</button>
+
+      <a className="btn details px-auto card-title-font" href={drinkDescriptionURL} target="_blank">Description</a>
+
       {/* ternary function that holds an empty heart or a full heart when liked/unliked */}
       <button className="btn details like-btn" onClick={loveItHandler}>{drinkLiked ? '❤' : '♡'}</button>
       {/* <div>Add Cart + -</div> */}

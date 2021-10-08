@@ -11,7 +11,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Coffee#Serving"
     },
     {
       "id": 2,
@@ -23,9 +24,10 @@
       ],
       "image": "./images/Latte.jpeg",
       "price": 5,
-      "count": 1,
+      "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Latte"
     },
     {
       "id": 3,
@@ -40,7 +42,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Cappuccino"
     },
     {
       "id": 4,
@@ -54,7 +57,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": true
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Caff%C3%A8_Americano"
     },
     {
       "id": 5,
@@ -67,7 +71,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Espresso"
     },
     {
       "id": 6,
@@ -80,7 +85,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Doppio"
     },
     {
       "id": 7,
@@ -94,7 +100,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": true
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Cortado"
     },
     {
       "id": 8,
@@ -108,7 +115,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://coffee.fandom.com/wiki/Red_eye"
     },
     {
       "id": 9,
@@ -122,7 +130,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Gal%C3%A3o"
     },
     {
       "id": 10,
@@ -135,7 +144,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Lungo"
     },
     {
       "id": 11,
@@ -149,7 +159,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Caff%C3%A8_macchiato"
     },
     {
       "id": 12,
@@ -164,7 +175,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Caff%C3%A8_mocha"
     },
     {
       "id": 13,
