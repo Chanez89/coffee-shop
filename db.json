@@ -189,8 +189,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
-      
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Ristretto"
     },
     {
       "id": 14,
@@ -204,7 +204,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Flat_white"
     },
     {
       "id": 15,
@@ -218,7 +219,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Affogato"
     },
     {
       "id": 16,
@@ -232,7 +234,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Coffee_(color)#Caf%C3%A9_au_Lait"
     },
     {
       "id": 17,
@@ -248,7 +251,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Irish_coffee"
     },
     {
       "id": 18,
@@ -263,7 +267,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://steemit.com/coffee/@daniellozada/the-venezuelan-guayoyo-coffee"
     },
     {
       "id": 19,
@@ -279,7 +284,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Cortado"
     },
     {
       "id": 20,
@@ -295,7 +301,8 @@
       "price": 5,
       "count": 0,
       "hot": true,
-      "liked": false
+      "liked": false,
+      "descriptionURL": "https://en.wikipedia.org/wiki/Aguapanela"
     }
   ]
 }

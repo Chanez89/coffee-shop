@@ -2,6 +2,10 @@
     background-color: #aa998f !important;
 }
 
+.btn-light {
+    background-color: white !important;
+}
+
 .no-underline {
     text-decoration: none !important
 }
@@ -59,7 +63,7 @@ body {
     background-color: whitesmoke;
 }
 
-ul {
+card-ul {
     list-style-type: none;
     margin: 0;
     padding: 0;

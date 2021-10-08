@@ -2,24 +2,28 @@ function About() {
   return (
     <div >
       <h1 className="lead">About this project</h1>
-        <p></p>
+        <p>This project was done in collaboration between Neil Chanez, Yuxiang Li and Jacob Nasrallah. We wanted to demonstrate the use of React, vanilla Javascript, and CSS/Styling with Bootstrap 5.</p>
 
       <div className="">
-        <div className="d-flex justify-content-between">
-          <h2 className="mt-4">Neil:</h2>
-          <p className="mt-4 p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis nec turpis sed vulputate. Donec aliquet massa id faucibus malesuada. Suspendisse magna enim, sodales placerat massa ac, egestas luctus nulla. Aliquam eu elit nunc. Etiam massa sem, bibendum sit amet ornare feugiat, dictum nec mauris. Nunc pellentesque eros eu lacus gravida, sed facilisis sapien pellentesque. Suspendisse lobortis, ipsum sed tempus aliquet, magna dui elementum erat, a gravida purus augue quis urna. Morbi eu odio commodo, egestas augue a, interdum odio. </p>
-          <span><img  src="https://picsum.photos/200"/></span>
+      <h1 className="lead">Neil Chanez</h1>
+        <div className="justify-content-between">
+          <img  src="https://picsum.photos/200/300"/>
+          <p className="mt-4 p-3">Located in Seattle, Washington. You can find me at <ul className="list-inline"><li><a href="https://github.com/nasjac26">github</a> </li><li><a href="https://www.linkedin.com/in/jacob-nasrallah-6792b5106/">linkedin</a></li></ul></p>
         </div>
-        <div className="d-flex justify-content-between">
+        <h1 className="lead">Yuxiang Li</h1>
+
+        <div className="justify-content-between">
           <img src="https://picsum.photos/200"/>
-          <h2 className="mt-4 p-3">Sean:</h2>
-          <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis nec turpis sed vulputate. Donec aliquet massa id faucibus malesuada. Suspendisse magna enim, sodales placerat massa ac, egestas luctus nulla. Aliquam eu elit nunc. Etiam massa sem, bibendum sit amet ornare feugiat, dictum nec mauris. Nunc pellentesque eros eu lacus gravida, sed facilisis sapien pellentesque. Suspendisse lobortis, ipsum sed tempus aliquet, magna dui elementum erat, a gravida purus augue quis urna. Morbi eu odio commodo, egestas augue a, interdum odio.</p>
+          <p className="mt-4">Located in Seattle, Washington. You can find me at <ul className="list-inline"><li><a href="https://github.com/nasjac26">github</a> </li><li><a href="https://www.linkedin.com/in/jacob-nasrallah-6792b5106/">linkedin</a></li></ul></p>
 
         </div>
-        <div className="d-flex justify-content-between">
-          <h2 className="mt-4 p-3">Jacob:</h2>
-          <p className="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis nec turpis sed vulputate. Donec aliquet massa id faucibus malesuada. Suspendisse magna enim, sodales placerat massa ac, egestas luctus nulla. Aliquam eu elit nunc. Etiam massa sem, bibendum sit amet ornare feugiat, dictum nec mauris. Nunc pellentesque eros eu lacus gravida, sed facilisis sapien pellentesque. Suspendisse lobortis, ipsum sed tempus aliquet, magna dui elementum erat, a gravida purus augue quis urna. Morbi eu odio commodo, egestas augue a, interdum odio. </p>
-          <img src="https://picsum.photos/200"/>
+        <h1 className="lead">Jacob Nasrallah</h1>
+
+        <div className=" justify-content-between">
+        <img src="./images/jacobpfp.jpeg"/>
+          <p className="mt-4">Located in Seattle, Washington. You can find me at <ul className="list-inline"><li><a href="https://github.com/nasjac26">github</a> </li><li><a href="https://www.linkedin.com/in/jacob-nasrallah-6792b5106/">linkedin</a></li></ul>
+            </p>
+          
         </div>
         </div>  
       </div>

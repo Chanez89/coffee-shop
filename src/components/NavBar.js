@@ -29,7 +29,7 @@ function NavBar({drinksMenuArr}) {
           <NavLink to='/About' className="text-muted no-underline">
             About
           </NavLink>
-          <button className="btn" disabled>
+          <button className="btn btn-light">
             <img src='./images/cart.svg' alt='shopping-cart' /> {grandTotalCountOfItemsInShoppingCart}
           </button>
         </div>

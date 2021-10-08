@@ -74,8 +74,10 @@ function DrinkCard(props) {
       <img className="" src={drinkImage} alt={drinkTitle}
         width="300px" height="300px"
       />
-      <ul 
-        className="card-font text-center p-3">{ingredientsArrayJSX}</ul>
+      <ul className="card-font text-center p-3 card-ul">{ingredientsArrayJSX}</ul>
+      {/*  need to add an empty space between DrinkIngredients */}
+      {/* <p>Description: {drinkDescription}</p> */}
+
       <p className="card-font">${drinkPrice.toFixed(2)}</p>
       <p className="card-font">{drinkHandler()}</p>
       {/* directs us to the ternary function drinkHandler */}
