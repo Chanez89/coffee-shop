@@ -7,12 +7,32 @@ function NewDrinkForm({addNewDrinkToDrinksMenuArr}) {
   const [newDrinkFormData, setNewDrinkFormData] = useState({
     title: '',
     description: '',
-    ingredient1: '',
-    ingredient2: '',
-    ingredient3: '',
+    ingredients: [
+      ''
+    ],
     image: '',
     hot: true
   });
+  
+  // iterate through the new drink form data's ingredients array
+    // to create `label` and `input` tags for each ingredient
+  // need to do this b/c the user can add variable number of ingredients
+  const ingredientInputFieldsJSX = newDrinkFormData.ingredients.map(
+    (singleIngredient, idx) => {
+      return (
+        <div key={idx}>
+          <label>{`Ingredient ${idx+1}:`}</label>
+          <input
+            type='text'
+            name={`ingredient-${idx+1}`}
+            value={singleIngredient}
+            onChange={newDrinkFormInputFieldHandler}
+            style={{ display: 'block' }}
+          />
+        </div>
+      );
+    }
+  );
 
   // function triggered as user fills out each input field of the new drink form
   // set up as a controlled form
@@ -26,11 +46,28 @@ function NewDrinkForm({addNewDrinkToDrinksMenuArr}) {
       value = false;
     }
 
-    // setter function to set the new state
-    setNewDrinkFormData({
-      ...newDrinkFormData,
-      [event.target.name]: value
-    });
+    if (event.target.name.includes('ingredient')) { // if this is an ingredient input field
+      // creating a copy of the new drink form data's ingredients array
+      const ingredientsNewArr = [...newDrinkFormData.ingredients];
+      
+      // get the index of the ingredient in the new drink form data's ingredients array
+        // using the `name` attribute of the input tag
+      // update the copy of the new drink form data's ingredients array
+      const ingredientIdx = event.target.name.split('-')[1] - 1;
+      ingredientsNewArr[ingredientIdx] = event.target.value;
+      
+      // setter function to set the new state
+      setNewDrinkFormData({
+        ...newDrinkFormData,
+        ingredients: ingredientsNewArr
+      });
+    } else {  // if this is not an ingredient input field
+      // setter function to set the new state
+      setNewDrinkFormData({
+        ...newDrinkFormData,
+        [event.target.name]: value
+      });
+    }
   }
 
   // function that is triggered when user clicks to submit the new drink form
@@ -41,11 +78,7 @@ function NewDrinkForm({addNewDrinkToDrinksMenuArr}) {
     const newDrinkObj = {
       title: newDrinkFormData.title,
       description: newDrinkFormData.description,
-      ingredients: [
-        newDrinkFormData.ingredient1,
-        newDrinkFormData.ingredient2,
-        newDrinkFormData.ingredient3
-      ],
+      ingredients: newDrinkFormData.ingredients,
       image: newDrinkFormData.image,
       price: 5.00,
       count: 0,
@@ -68,11 +101,28 @@ function NewDrinkForm({addNewDrinkToDrinksMenuArr}) {
     setNewDrinkFormData({
       title: '',
       description: '',
-      ingredient1: '',
-      ingredient2: '',
-      ingredient3: '',
+      ingredients: [
+        ''
+      ],
       image: '',
       hot: newDrinkFormData.hot
+    });
+  }
+
+  // function triggered when `Add Another Ingredient` button is clicked
+  function addAnotherIngredientInputFieldHandler(event) {
+    // don't fully understand why this line is needed
+      // triggers the `submitNewDrinkFormHandler` function without this line
+      // has something to do with event propagation
+    event.preventDefault();
+    
+    // creating a copy of the new drink form data's ingredients array
+    const ingredientsNewArr = [...newDrinkFormData.ingredients, ''];
+
+    // setter function to set the new state
+    setNewDrinkFormData({
+      ...newDrinkFormData,
+      ingredients: ingredientsNewArr
     });
   }
 
@@ -96,30 +146,21 @@ function NewDrinkForm({addNewDrinkToDrinksMenuArr}) {
           style={{display: 'block'}}
         >
         </textarea>
-        <label>Ingredient 1:</label>
+        {/* <label>Ingredient 1:</label>
         <input
           type='text'
-          name='ingredient1'
-          value={newDrinkFormData.ingredient1}
+          name='ingredients'
+          value={newDrinkFormData.ingredients[0]}
           onChange={newDrinkFormInputFieldHandler}
           style={{display: 'block'}}
-        />
-        <label>Ingredient 2:</label>
-        <input
-          type='text'
-          name='ingredient2'
-          value={newDrinkFormData.ingredient2}
-          onChange={newDrinkFormInputFieldHandler}
+        /> */}
+        {ingredientInputFieldsJSX}
+        <button
+          onClick={addAnotherIngredientInputFieldHandler}
           style={{display: 'block'}}
-        />
-        <label>Ingredient 3:</label>
-        <input
-          type='text'
-          name='ingredient3'
-          value={newDrinkFormData.ingredient3}
-          onChange={newDrinkFormInputFieldHandler}
-          style={{display: 'block'}}
-        />
+        >
+          Add Another Ingredient
+        </button>
         <label>Image URL:</label>
         <input
           type='text'
