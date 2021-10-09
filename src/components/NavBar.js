@@ -29,7 +29,7 @@ function NavBar({drinksMenuArr}) {
           <NavLink to='/About' className="text-muted no-underline">
             About
           </NavLink>
-          <button className="btn btn-light">
+          <button className="btn btn-light" style={{borderRadius: "5rem"}}>
             <img src='./images/cart.svg' alt='shopping-cart' /> {grandTotalCountOfItemsInShoppingCart}
           </button>
         </div>
